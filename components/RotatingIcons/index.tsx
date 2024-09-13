@@ -40,7 +40,7 @@ const RotatingIcons: React.FC = () => {
             <div className="flex items-center justify-center min-h-screen bg-gray-900">
                 <div className="relative w-[300px] h-[300px]">
                     <div ref={iconRef}
-                         className="absolute inset-0 flex items-center justify-center border border-amber-400">
+                         className="absolute inset-0 flex items-center justify-center">
                         <Icon
                             className="absolute"
                             name="docker" width={50} height={50}/>
