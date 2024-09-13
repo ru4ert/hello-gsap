@@ -6,6 +6,7 @@ import {MotionPathHelper} from 'gsap-trial/MotionPathHelper';
 import {CustomEase} from 'gsap/CustomEase';
 import {Icon} from "@/components/Icon";
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
+import Image from "next/image";
 
 gsap.registerPlugin(
     MotionPathHelper,
@@ -15,7 +16,6 @@ gsap.registerPlugin(
 const circularPath = "M-306.92,6.323 C-306.92,-55.035 -113.133,-116.538 24.866,-116.538 153.841,-116.538 336.37,-59.208 340.197,23.694 343.745,101.341 231.546,162.159 20.577,162.159 -171.334,162.159 -301.881,98.177 -301.893,17.512"
 const RotatingIcons: React.FC = () => {
     const iconRef = useRef<HTMLDivElement>(null);
-    const computerRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         if (!iconRef.current) return;
@@ -62,14 +62,13 @@ const RotatingIcons: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div ref={computerRef}
-                 className="relative mt-32 w-[400px] h-[250px] bg-gray-800 rounded-lg flex items-center justify-center">
-                <div className="w-[350px] h-[200px] bg-black rounded-md">
-                </div>
+            <div className="bg-blue-100 min-h-screen">
+                <Image src="/assets/trash.png"
+                       className="mx-auto"
+                       alt="trash" width={700} height={500}/>
             </div>
         </>
     )
-        ;
 };
 
 export default RotatingIcons;
